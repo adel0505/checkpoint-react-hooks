@@ -1,0 +1,7 @@
+.EditForm {
+  padding: 30px 100px;
+  margin: 10px 200px;
+  border-radius: 5px;
+  background: rgb(196, 191, 191);
+  border: 1px solid rgba(189, 24, 24, 0.03);
+}

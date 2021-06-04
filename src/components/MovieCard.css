@@ -1,0 +1,21 @@
+.office-movie {
+  list-style: none;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid rgba(189, 24, 24, 0.03);
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+.office-movie:hover {
+  box-shadow: 0 20px 50px 0 #83a3ce;
+  text-decoration: none;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
