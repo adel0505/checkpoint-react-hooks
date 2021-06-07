@@ -2,23 +2,29 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "./MovieCard.css";
 import Rate from "./Rate";
+import { Link } from "react-router-dom";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({
+  movie: { photo, posterURL, title, rating, description, id },
+}) => {
   return (
-      <Card className="office-movie" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={movie.photo} />
-        <Card.Body>
-          <Card.Title><a href={movie.posterURL}>{movie.title}</a></Card.Title>
-          <Card.Text>{movie.description}</Card.Text>
-          <p>
-            <Rate rating={movie.rating}></Rate>
-          </p>
-          <Button variant="primary" href={movie.posterURL}>
-            {movie.title}
+    <Card className="office-movie" style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={photo} />
+      <Card.Body>
+        <Card.Title>
+          <a href={posterURL}>{title}</a>
+        </Card.Title>
+        <Card.Text>{description}</Card.Text>
+        <p>
+          <Rate rating={rating} isEdit={false}></Rate>
+        </p>
+        <Link to={`/detailcard/${id}`}>
+          <Button variant="primary" href={posterURL}>
+            {title}
           </Button>
-        </Card.Body>
-      </Card>
-    
+        </Link>
+      </Card.Body>
+    </Card>
   );
 };
 export default MovieCard;

@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Add = ({ setmoviesList, moviesList, setIsEdit }) => {
   const [show, setShow] = useState(true);
@@ -20,7 +21,6 @@ const Add = ({ setmoviesList, moviesList, setIsEdit }) => {
   };
 
   const Addd = () => {
-    setIsEdit(false);
     if (newMovie.description && newMovie.photo && newMovie.rating) {
       setNewMovie({ ...newMovie, id: Math.random() });
       setmoviesList([...moviesList, newMovie]);
@@ -105,9 +105,11 @@ const Add = ({ setmoviesList, moviesList, setIsEdit }) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={Addd}>
-            Save Changes
-          </Button>
+          <Link to="/movielist">
+            <Button variant="primary" onClick={Addd}>
+              Save Changes
+            </Button>
+          </Link>
         </Modal.Footer>
       </Modal>
     </>

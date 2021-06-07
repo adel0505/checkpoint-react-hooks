@@ -15,7 +15,7 @@ const Rate = ({ rating, setfilterRate, isEdit }) => {
             style={styleSpan}
             key={el}
             onClick={() => {
-              setfilterRate(el);
+              isEdit ? setfilterRate(el) : console.log("null");
             }}
           >
             ★
@@ -26,7 +26,7 @@ const Rate = ({ rating, setfilterRate, isEdit }) => {
             style={styleSpan}
             key={el}
             onClick={() => {
-              setfilterRate(el);
+              isEdit ? setfilterRate(el) : console.log("null");
             }}
           >
             ★

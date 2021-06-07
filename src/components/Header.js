@@ -33,20 +33,8 @@ const Header = ({
               {" "}
             </Rate>
           </Col>
-          <Col>
-            <Button variant="primary button" onClick={() => setIsEdit(true)}>
-              + Add
-            </Button>
-          </Col>
         </Row>
       </Form>
-      {isEdit ? (
-        <Add
-          setmoviesList={setmoviesList}
-          moviesList={moviesList}
-          setIsEdit={setIsEdit}
-        ></Add>
-      ) : null}
     </div>
   );
 };
